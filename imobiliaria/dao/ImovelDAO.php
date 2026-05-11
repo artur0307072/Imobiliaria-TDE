@@ -9,7 +9,6 @@ class ImovelDAO {
     public function __construct() {
         $this->pdo = Conexao::getInstance();
     }
-x
     public function inserir(Imovel $imovel, int $usuario_id): bool {
         $sql = "INSERT INTO imoveis (titulo, descricao, preco, endereco, usuario_id)
                 VALUES (:titulo, :descricao, :preco, :endereco, :usuario_id)";
